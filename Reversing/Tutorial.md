@@ -36,7 +36,7 @@ You might want to set the disassembly syntax to Intel, by typing `set disassembl
 
 Let's start analyzing the code, starting from the 4th line. 
 
-The fourth line uses the `lea` opcode (short for _operation code_) to *L*oad the *E*ffective *A*ddress of `rip+0xec3` into `rdi`. `rdi` is the argument for puts (which is a C function similar to printf).
+The fourth line uses the `lea` opcode (short for _operation code_) to **L**oad the **E**ffective **A**ddress of `rip+0xec3` into `rdi`. `rdi` is the argument for puts (which is a C function similar to printf).
 
 The fifth line prints it. Nothing interesting so far.
 
