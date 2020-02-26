@@ -8,7 +8,7 @@ GDB is the _GNU Debugger_, which is by default installed in most (Debian-based, 
 
 ### Basic stuff
 
-You can start debugging an executable with gdb <file name>.
+You can start debugging an executable with `gdb <file name>`.
 
 We'll be mostly focussing on C executables, even though GDB can debug others as well, since C is the easiest to debug.
 
@@ -65,6 +65,12 @@ And if you continue, you'll see that:
 You've cracked the code!
 
 ![HACKERMAN](https://i.kym-cdn.com/photos/images/original/001/176/251/4d7.png)
+
+### Useful shortcuts
+
+run `set $eflags ^= 1 << 6` if you want to set/reset the Zero Flag. Here's how it works: 
+
+The `eflags` register is the x86 equivalent of the FLAGS register from 16-bit assembly, and it contains the zero flag in the 6th bit. By using `set $eflags ^= 1 << 6`, you're XORing the current value of `eflags` with 100000, which means the 6th bit is XORed with 1, to set/reset it.
 
 ### More resources
 
